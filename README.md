@@ -1,0 +1,1 @@
+It's going to be simple project to train JS - making photo slider
