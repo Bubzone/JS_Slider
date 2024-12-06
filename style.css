@@ -1,0 +1,93 @@
+*{
+    font-family: 'Brush Script MT', cursive;
+    background-color: #b2cdff;
+    color: #0c203b;
+}
+
+header, main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 20%;
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+h2{
+    font-size: 4vw;
+}
+
+.slider{
+    position: relative;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+}
+
+.photos{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    background: none; /* Brak tła na przycisku */
+    font-size: 7vw;
+}
+
+.arrow.left {
+    left: 0px;
+}
+
+.arrow.right {
+    right: 0px;
+}
+
+.arrow.right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, #b2cdff);
+    z-index: -1; /* Gradient pod przyciskiem */
+}
+
+.arrow.left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, transparent, #b2cdff);
+    z-index: -1; /* Gradient pod przyciskiem */
+}
+
+.arrow.left:hover{
+    background: linear-gradient(to left, transparent, #759eeb);
+}
+
+.arrow.right:hover{
+    background: linear-gradient(to right, transparent, #759eeb);
+}
